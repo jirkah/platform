@@ -31,7 +31,7 @@ module.exports = React.createClass({
         }
 
         var showDropdown = isOwner || (this.props.allowReply === 'true' && type !== 'Comment');
-        if (post.state === Constants.POST_FAILED || post.state === Constants.POST_LOADING) {
+        if (post.state === Constants.POST_FAILED || post.state === Constants.POST_LOADING || post.state === Constants.POST_DELETED) {
             showDropdown = false;
         }
 
